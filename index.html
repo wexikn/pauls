@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Porsche 911</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="main">
+        <nav>
+            <div class="logo">
+                <img src="l98aavoj.png">
+            </div>
+            <div class= "nav-links">
+                <ul>
+                    <li><a href="#">Price</a></li>
+                    <li><a href="#">Car</a></li>
+                    <li><a href="#">Performance</a></li>
+                    <li><a href="#">engine</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class = "information">
+            <div class="overlay"></div>
+            <img src="Porsche911_HP.webp" class="car">
+            <div id ="circle">
+                <div class = "feature one">
+                    <img src="hb.webp">
+                    <div>
+                        <h1>Performance</h1>
+                        <p>370-640 horspepower</p>
+                    </div>
+                </div>
+                <div class = "feature two">
+                    <img src="trubo.jpg">
+                    <div>
+                        <h1>Car</h1>
+                        <p>911 tubro s is the fastest production 911  </p>
+                    </div>
+                </div>
+                <div class = "feature three">
+                    <img src="gt3.webp">
+                    <div>
+                        <h1>Price</h1>
+                        <p>$106,100-272,300</p>
+                    </div>
+                </div>
+                <div class = "feature four">
+                    <img src="enigne.jpg">
+                    <div>
+                        <h1>engine</h1>
+                        <p>The porsche 911 comes with a 3.7 liter flat six</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="arrow.png" id="upBtn">
+                <h3>features</h3>
+            <img src="arrow.png" id="downBtn">
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+</html>
